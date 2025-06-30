@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;500;600;700;800;900&family=Fredoka:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&family=Righteous&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure proper text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Animation improvements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Neon glow effects */
+.text-neon-blue {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.text-neon-purple {
+  color: #b347d9;
+  text-shadow: 0 0 10px #b347d9;
+}
+
+.text-neon-pink {
+  color: #ff47d9;
+  text-shadow: 0 0 10px #ff47d9;
+}
+
+.text-neon-green {
+  color: #47ff91;
+  text-shadow: 0 0 10px #47ff91;
+}
+
+.text-neon-yellow {
+  color: #ffff47;
+  text-shadow: 0 0 10px #ffff47;
+}
+
+/* Custom focus styles for navigation and buttons */
+button:focus,
+input:focus,
+a:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.5), 0 0 15px rgba(0, 212, 255, 0.3) !important;
+  border-radius: 12px !important;
+}
+
+/* Specific focus styles for navigation links */
+nav a:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.6), 0 0 10px rgba(0, 212, 255, 0.4) !important;
+  border-radius: 8px !important;
+  background-color: rgba(0, 212, 255, 0.1) !important;
+}
+
+/* Focus styles for CTA buttons */
+.bg-gradient-to-r:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.4) !important;
+  border-radius: 12px !important;
+}
+
+/* Mobile menu button focus */
+.md\:hidden button:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.6), 0 0 10px rgba(0, 212, 255, 0.4) !important;
+  border-radius: 8px !important;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .font-display {
+    line-height: 1.1;
+  }
+}
+
+/* Prevent text overflow */
+.text-responsive {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ensure proper container behavior */
+.container-responsive {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
