@@ -1,5 +1,6 @@
-Wave2MusicApp
-Submitted this AI voice transforming app to the Bolt Competition 2025 
+-- Wave2MusicApp --
+
+I submitted this AI voice transforming app to the Bolt Competition 2025 
 Record your vocals and have AI transform it into a music style like a orchestra, jazz, rock song snippet. 
 
 Its a way to see your song ideas come to life. 
